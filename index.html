@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+	box-sizing: border-box;
+}
+/*:root{
+	counter-reset: item;
+}*/
+body{
+	padding: 1rem;
+}
+.grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 1fr);
+	grid-auto-rows: 1fr;
+	grid-auto-flow: dense;
+	gap: 0.5rem;
+	max-width: 1200px;
+	margin: auto;
+}
+.grid::before{
+	content: "";
+	grid-column: 1;
+	grid-row: 1;
+	padding-bottom: 100%;
+}
+.grid div:first-child{
+	grid-column: 1;
+	grid-row: 1;
+}
+.grid div{
+	display: grid;
+	place-items: center;
+	border-radius: 0.25rem;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 8px silver;
+}
+img{
+	display: block;
+	object-fit: cover;
+	object-position: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+/*.grid div::after{
+	content: counter(item);
+	counter-increment: item;
+	font: 3rem/1.5 sans-serif;
+	color: dimgrey;
+}*/
+
+    <title>Document</title>
+</head>
+<body>
+    .grid .one{
+	background-color: lightblue;
+}
+.grid .two{
+	background-color: lightsalmon;
+}
+.grid .three{
+	background-color: khaki;
+}
+.grid .four{
+	background-color: silver;
+}
+@media screen and (min-width: 460px){
+	.grid{
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+	.grid .span-h{
+		grid-column: span 2;
+	}
+	.grid .span-v{
+		grid-row: span 2;
+	}
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<div class="grid">
+		<div class="one"><img src="//picsum.photos/seed/a/350" alt=""></div>
+		<div class="two"><img src="//picsum.photos/seed/b/350" alt=""></div>
+		<div class="three span-v"><img src="//picsum.photos/seed/c/350" alt=""></div>
+		<div class="four span-h"><img src="//picsum.photos/seed/d/350" alt=""></div>
+		<div class="one span-v span-h"><img src="//picsum.photos/seed/e/350" alt=""></div>
+		<div class="two"><img src="//picsum.photos/seed/f/350" alt=""></div>
+		<div class="three span-h"><img src="//picsum.photos/seed/g/350" alt=""></div>
+		<div class="four span-v"><img src="//picsum.photos/seed/h/350" alt=""></div>
+		<div class="one"><img src="//picsum.photos/seed/i/350" alt=""></div>
+		<div class="two"><img src="//picsum.photos/seed/j/350" alt=""></div>
+		<div class="three"><img src="//picsum.photos/seed/k/350" alt=""></div>
+		<div class="four span-h"><img src="//picsum.photos/seed/l/350" alt=""></div>
+		<div class="one"><img src="//picsum.photos/seed/m/350" alt=""></div>
+		<div class="two"><img src="//picsum.photos/seed/n/350" alt=""></div>
+		<div class="three"><img src="//picsum.photos/seed/o/350" alt=""></div>
+		<div class="four"><img src="//picsum.photos/seed/p/350" alt=""></div>
+		<div class="one span-v"><img src="//picsum.photos/seed/q/350" alt=""></div>
+		<div class="two"><img src="//picsum.photos/seed/r/350" alt=""></div>
+		<div class="three"><img src="//picsum.photos/seed/s/350" alt=""></div>
+		<div class="four span-v"><img src="//picsum.photos/seed/t/350" alt=""></div>
+		<div class="one"><img src="//picsum.photos/seed/u/350" alt=""></div>
+		<div class="two"><img src="//picsum.photos/seed/v/350" alt=""></div>
+		<div class="three"><img src="//picsum.photos/seed/w/350" alt=""></div>
+		<div class="four span-v span-h"><img src="//picsum.photos/seed/x/350" alt=""></div>
+		<div class="one"><img src="//picsum.photos/seed/y/350" alt=""></div>
+		<div class="two"><img src="//picsum.photos/seed/z/350" alt=""></div>
+	</div>, initial-scale=1.0">
+</body>
+</html>
